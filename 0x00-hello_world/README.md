@@ -1,0 +1,1 @@
+Welcome to C, C programming is a widely-used and influential programming language known for its simplicity, power, and versatility. It'sv a high-level programming language originally developed in the early 1970s.
