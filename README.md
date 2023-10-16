@@ -1,1 +1,1 @@
-Low-level programming refers to the process of writing computer programs using a programming language that provides little to no abstraction from the hardware. Examples:  Assembly Language and Machine Code.
+Pointers and arrays
