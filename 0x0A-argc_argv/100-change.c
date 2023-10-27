@@ -1,166 +1,47 @@
-
-#include <stdio.h>
-
-                
-
-#include <stdlib.h>
-
-                
-
-#include "main.h"
-
-                
-
-
-                
-
-/**
-
-                
-
- * main - prints the minimum number of coins to
-
-                
-
- * make change for an amount of money
-
-                
-
- * @argc: number of arguments
-
-                
-
- * @argv: array of arguments
-
-                
-
- *
-
-                
-
- * Return: 0 (Success), 1 (Error)
-
-                
-
- */
-
-                
-
-int main(int argc, char *argv[])
-
-                
-
-{
-
-                
-
-        int num, j, result;
-
-                
-
-        int coins[] = {25, 10, 5, 2, 1};
-
-                
-
-
-                
-
-        if (argc != 2)
-
-                
-
-        {
-
-                
-
-                printf("Error\n");
-
-                
-
-                return (1);
-
-                
-
-        }
-
-                
-
-
-                
-
-        num = atoi(argv[1]);
-
-                
-
-        result = 0;
-
-                
-
-
-                
-
-        if (num < 0)
-
-                
-
-        {
-
-                
-
-                printf("0\n");
-
-                
-
-                return (0);
-
-                
-
-        }
-
-                
-
-
-                
-
-        for (j = 0; j < 5 && num >= 0; j++)
-
-                
-
-        {
-
-                
-
-                while (num >= coins[j])
-
-                
-
-                {
-
-                
-
-                        result++;
-
-                
-
-                        num -= coins[j];
-
-                
-
-                }
-
-                
-
-        }
-
-                
-
-
-                
-
-        printf("%d\n", result);
-
-                
-
-        return (0);
-
-                
+#include <stdio.h> 
+ #include <stdlib.h> 
+  
+ /** 
+  * main - prints minimum number coins to make change for an amount of money. 
+  * @argc: number of arguments 
+  * @argv: array with the arguments 
+  * 
+  * Return: always 0 
+  **/ 
+  
+ int main(int argc, char *argv[]) 
+ { 
+         int dev = 0, coins = 0; 
+         char c[] = "Error"; 
+  
+         if (argc != 2) 
+         { 
+                 printf("%s\n", c); 
+                 return (1); 
+         } 
+         dev = atoi(argv[1]); 
+         while (dev >= 25) 
+         { 
+                 dev -= 25; 
+                 coins++; 
+         } 
+         while (dev >= 10) 
+         { 
+                 dev -= 10; 
+                 coins++; 
+         } 
+         while (dev >= 5) 
+         { 
+                 dev -= 5; 
+                 coins++; 
+         } 
+         while (dev >= 2) 
+         { 
+                 dev -= 2; 
+                 coins++; 
+         } 
+         if (dev == 1) 
+                 coins++; 
+         printf("%d\n", coins); 
+         return (0); 
+ } 
