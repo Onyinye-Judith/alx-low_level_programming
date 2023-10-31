@@ -1,43 +1,80 @@
-#ifndef MAIN_H
+[27/10, 6:49 pm] Maxwell ALX SE: #include "main.h"
 
-                
+/**
+ * _atoi - function to convert string to integer
+ * @s: pointer to the string to be converted
+ *
+ * Return: return the  new integer value
+ */
 
-#define MAIN_H
+int _atoi(char *s)
+{
+	int sign, result, i;
 
-                
+	sign = 1;
+	result = 0;
+	i = 0;
 
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+		{
+			sign *= -1;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			while (s[i] >= '0' && s[i] <= '9')
+			{
+				result = result * 10 + (s[i] - '0');
+				i++;
+			}
+			break;
+		}
+		else
+		{
+			i++;
+		}
+	}
 
-                
+	return (sign * result);
+}
+[27/10, 7:00 pm] Apple Of Gods Eye: #include "main.h"
 
-char *create_array(unsigned int size, char c);
+/**
+ * _atoi - function to convert string to integer
+ * @s: pointer to the string to be converted
+ *
+ * Return: return the  new integer value
+ */
 
-                
+int _atoi(char *s)
+{
+	int sign, result, i;
 
-int _putchar(char c);
+	sign = 1;
+	result = 0;
+	i = 0;
 
-                
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+		{
+			sign *= -1;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			while (s[i] >= '0' && s[i] <= '9')
+			{
+				result = result * 10 + (s[i] - '0');
+				i++;
+			}
+			break;
+		}
+		else
+		{
+			i++;
+		}
+	}
 
-char *_strdup(char *str);
-
-                
-
-char *str_concat(char *s1, char *s2);
-
-                
-
-int **alloc_grid(int width, int height);
-
-                
-
-void free_grid(int **grid, int height);
-
-                
-
-char *argstostr(int ac, char **av);
-
-                
-
-
-                
-
-#endif
+	return (sign * result);
+}
