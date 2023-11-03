@@ -1,0 +1,1 @@
+malloc and free are functions in the C programming language used for dynamic memory allocation and deallocation.malloc: This function stands for "memory allocation." It is used to allocate a block of memory of a specified size and returns a pointer to the first byte of the block.
