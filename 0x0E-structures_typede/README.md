@@ -1,0 +1,1 @@
+When TABLESIZE is defined using #define TABLESIZE BUFSIZE, it takes the value of BUFSIZE at that point in the code, which is 1020. The subsequent #undef BUFSIZE removes the definition of BUFSIZE, and then #define BUFSIZE 37 assigns a new value to BUFSIZE. However, this new value does not affect the previous definition of TABLESIZE.
