@@ -1,0 +1,1 @@
+Singly Linked List. The least complex linked list is the singly linked list, where a head node points to a node, that node points to a node, and so on until the tail is reached. A common example of this is a train: all cars are connected together singly.
