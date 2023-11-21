@@ -1,4 +1,5 @@
-include <stdio.h>
+#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -29,5 +30,6 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	return (count);
+	printf("Number of nodes in the list: %lu\n", count);
+	return count;
 }
