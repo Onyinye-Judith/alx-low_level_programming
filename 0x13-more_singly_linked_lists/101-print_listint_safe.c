@@ -30,5 +30,6 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
+	printf("Number of nodes in the list: %lu\n", (unsigned long)count);
 	return (count);
 }
