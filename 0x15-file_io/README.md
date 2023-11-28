@@ -1,0 +1,1 @@
+File I/O, or File Input/Output, refers to the operations a program can perform on files. It involves reading data from files and writing data to files. In the context of programming, this typically involves using functions or system calls to interact with files stored on a computer's file system.
