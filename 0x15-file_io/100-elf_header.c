@@ -27,8 +27,10 @@ void print_elf_header(Elf64_Ehdr *header)
 	for (int i = 0; i < EI_NIDENT; i++)
 		printf("%02x%c", header->e_ident[i], i == EI_NIDENT - 1 ? '\n' : ' ');
 
-	printf("  Class:                             %s\n", header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
-	printf("  Data:                              %s\n", header->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" : "2's complement, big endian");
+	printf("  Class:                             %s\n",
+	       header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
+	printf("  Data:                              %s\n",
+	       header->e_ident[EI_DATA] == ELFDATA2LSB ? "2's complement, little endian" : "2's complement, big endian");
 	printf("  Version:                           %d (current)\n", header->e_ident[EI_VERSION]);
 	printf("  OS/ABI:                            ");
 	switch (header->e_ident[EI_OSABI])
@@ -53,7 +55,8 @@ void print_elf_header(Elf64_Ehdr *header)
 
 	/* Add more fields as needed */
 
-	printf("  Type:                              %s\n", header->e_type == ET_EXEC ? "EXEC (Executable file)" : "DYN (Shared object file)");
+	printf("  Type:                              %s\n",
+	       header->e_type == ET_EXEC ? "EXEC (Executable file)" : "DYN (Shared object file)");
 	printf("  Entry point address:               %#lx\n", header->e_entry);
 
 	/* Add more fields as needed */
