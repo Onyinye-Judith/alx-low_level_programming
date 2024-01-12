@@ -1,0 +1,1 @@
+A doubly linked list is a data structure where each element (node) contains a data part and two pointers, one pointing to the previous node and another pointing to the next node in the sequence. This bidirectional linkage allows for easy traversal in both directions, enhancing operations like insertion and deletion compared to a singly linked list.
