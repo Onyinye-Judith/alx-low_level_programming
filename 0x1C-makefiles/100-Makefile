@@ -1,14 +1,26 @@
+# _*_ MakeFile _*_
+
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-	NAME = holberton
-	CFLAGS = -Wall -Werror -Wextra -pedantic
-	PHONY: all clean oclean fclean re
-	all: m.h $(OBJ)
+NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+.PHONY: all clean oclean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-clean:
-	$(RM) *~ $(NAME)
-oclean:
-	$(RM) $(OBJ)
-	fclean: clean oclean
-	re: oclean all
+
+ 	clean:
+ 		$(RM) *~ $(NAME)
+
+ 		oclean:
+ 			$(RM) $(OBJ)
+
+ 			fclean: clean oclean
+ 			re: oclean all
+
+ 			ifeq ($(wildcard m.h),)
+ 			$(error The header file m.h is missing)
+ 			endif
